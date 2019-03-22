@@ -9,6 +9,21 @@ variable "azure_client_id" {}
 variable "azure_client_secret" {}
 
 ################################################################################
+## Outputs
+################################################################################
+output "acme_resource_group" {
+  value = "${azurerm_resource_group.demo.name}"
+}
+
+output "acme_cluster_name" {
+  value = "${azurerm_kubernetes_cluster.demo.name}"
+}
+
+output "acme_cluster_kubeconfig" {
+  value = "${azurerm_kubernetes_cluster.demo.kube_config_raw}"
+}
+
+################################################################################
 ## Resources
 ################################################################################
 resource "azurerm_resource_group" "demo" {
