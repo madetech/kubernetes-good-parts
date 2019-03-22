@@ -1,0 +1,8 @@
+*tfstate*
+out.plan
+.env
+.terraform
+.DS_Store
+.env*
+!.env.example
+id_*
